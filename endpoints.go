@@ -8,9 +8,12 @@ import (
 
 	jsondoc "github.com/Stebalien/go-json-doc"
 	cid "github.com/ipfs/go-cid"
-	config "github.com/ipfs/go-ipfs"
-	cmds "github.com/ipfs/go-ipfs-cmds"
-	corecmds "github.com/ipfs/go-ipfs/core/commands"
+	//config "github.com/ipfs/go-ipfs"
+	//config "github.com/TRON-US/go-btfs"
+	//cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/TRON-US/go-btfs-cmds"
+	//corecmds "github.com/ipfs/go-ipfs/core/commands"
+	corecmds "github.com/TRON-US/go-btfs/core/commands"
 	peer "github.com/libp2p/go-libp2p-peer"
 	peerstore "github.com/libp2p/go-libp2p-peerstore"
 	multiaddr "github.com/multiformats/go-multiaddr"
@@ -57,7 +60,7 @@ func (a sorter) Len() int           { return len(a) }
 func (a sorter) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a sorter) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
-const APIPrefix = "/api/v0"
+const APIPrefix = "/api/vXX"
 
 // AllEndpoints gathers all the endpoints from go-ipfs.
 func AllEndpoints() []*Endpoint {
@@ -65,7 +68,7 @@ func AllEndpoints() []*Endpoint {
 }
 
 func IPFSVersion() string {
-	return config.CurrentVersionNumber
+	return "config.CurrentVersionNumber"
 }
 
 // Endpoints receives a name and a go-ipfs command and returns the endpoints it

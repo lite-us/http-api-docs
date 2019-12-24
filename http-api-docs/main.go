@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/ipfs/http-api-docs"
+	"github.com/tron-us/http-api-docs"
 )
 
 func main() {
