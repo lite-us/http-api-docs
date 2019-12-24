@@ -61,7 +61,7 @@ func (a sorter) Len() int           { return len(a) }
 func (a sorter) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a sorter) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
-const APIPrefix = "/api/vXX"
+const APIPrefix = "/api/v0"
 
 // AllEndpoints gathers all the endpoints from go-ipfs.
 func AllEndpoints() []*Endpoint {
