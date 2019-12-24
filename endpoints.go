@@ -4,6 +4,7 @@ package docs
 
 import (
 	"fmt"
+	"github.com/TRON-US/go-btfs/repo/config"
 	"sort"
 
 	jsondoc "github.com/Stebalien/go-json-doc"
@@ -68,7 +69,7 @@ func AllEndpoints() []*Endpoint {
 }
 
 func IPFSVersion() string {
-	return "config.CurrentVersionNumber"
+	return config.CurrentVersionNumber
 }
 
 // Endpoints receives a name and a go-ipfs command and returns the endpoints it
