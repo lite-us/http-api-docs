@@ -1,4 +1,4 @@
-// This is an utility to generate documentation from go-ipfs commands
+// This is an utility to generate documentation from go-btfs commands
 package main
 
 import (

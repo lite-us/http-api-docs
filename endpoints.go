@@ -1,4 +1,4 @@
-// Package docs can be used to gather go-ipfs commands and automatically
+// Package docs can be used to gather go-btfs commands and automatically
 // generate documentation or tests.
 package docs
 
@@ -32,7 +32,7 @@ const IndentLevel = 4
 // Failsafe when traversing objects containing objects of the same type
 const MaxIndent = 20
 
-// Endpoint defines an IPFS RPC API endpoint.
+// Endpoint defines an BTFS RPC API endpoint.
 type Endpoint struct {
 	Name        string
 	Arguments   []*Argument
