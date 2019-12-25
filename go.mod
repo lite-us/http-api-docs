@@ -4,13 +4,13 @@ go 1.13
 
 require (
 	github.com/Stebalien/go-json-doc v0.0.2
-	github.com/TRON-US/go-btfs v0.2.3
+	github.com/TRON-US/go-btfs v0.4.20-rc2.0.20191224005818-01f683c1d053
 	github.com/TRON-US/go-btfs-cmds v0.1.5
 	github.com/ipfs/go-cid v0.0.2
-	github.com/ipfs/http-api-docs v0.0.0-20191105204009-93b8b53a6ce6 // indirect
-	github.com/libp2p/go-libp2p-peer v0.1.1
-	github.com/libp2p/go-libp2p-peerstore v0.0.6
+	github.com/libp2p/go-libp2p-peer v0.2.0
+	github.com/libp2p/go-libp2p-peerstore v0.1.2-0.20190621130618-cfa9bb890c1a
 	github.com/multiformats/go-multiaddr v0.0.4
+
 )
 
 replace github.com/go-critic/go-critic v0.0.0-20181204210945-ee9bf5809ead => github.com/go-critic/go-critic v0.3.5-0.20190210220443-ee9bf5809ead
