@@ -4,7 +4,6 @@ package docs
 
 import (
 	"fmt"
-	config "github.com/TRON-US/go-btfs"
 	"sort"
 
 	jsondoc "github.com/Stebalien/go-json-doc"
@@ -14,6 +13,8 @@ import (
 	peer "github.com/libp2p/go-libp2p-peer"
 	peerstore "github.com/libp2p/go-libp2p-peerstore"
 	multiaddr "github.com/multiformats/go-multiaddr"
+	"github.com/TRON-US/go-btfs-api"
+	config "github.com/TRON-US/go-btfs"
 )
 
 var JsondocGlossary = jsondoc.NewGlossary().
@@ -57,7 +58,7 @@ func (a sorter) Len() int           { return len(a) }
 func (a sorter) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a sorter) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
-const APIPrefix = "/api/v0"
+const APIPrefix = "/api/"+ shell.API_VERSION
 
 // AllEndpoints gathers all the endpoints from go-btfs.
 func AllEndpoints() []*Endpoint {

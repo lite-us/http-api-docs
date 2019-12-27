@@ -1,10 +1,6 @@
 # http-api-docs
 
 
-[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
-[![](https://img.shields.io/badge/project-BTFS-blue.svg?style=flat-square)](https://www.bittorrent.com/btfs/)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
 > A generator for go-btfs API endpoints documentation.
 
 ## Table of Contents
