@@ -1,9 +1,9 @@
-// This is an utility to generate documentation from go-ipfs commands
+// This is an utility to generate documentation from go-btfs commands
 package main
 
 import (
 	"fmt"
-	"github.com/ipfs/http-api-docs"
+	"github.com/tron-us/http-api-docs"
 )
 
 func main() {

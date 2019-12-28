@@ -1,4 +1,4 @@
-// Package docs can be used to gather go-ipfs commands and automatically
+// Package docs can be used to gather go-btfs commands and automatically
 // generate documentation or tests.
 package docs
 
@@ -8,12 +8,13 @@ import (
 
 	jsondoc "github.com/Stebalien/go-json-doc"
 	cid "github.com/ipfs/go-cid"
-	config "github.com/ipfs/go-ipfs"
-	cmds "github.com/ipfs/go-ipfs-cmds"
-	corecmds "github.com/ipfs/go-ipfs/core/commands"
+	cmds "github.com/TRON-US/go-btfs-cmds"
+	corecmds "github.com/TRON-US/go-btfs/core/commands"
 	peer "github.com/libp2p/go-libp2p-peer"
 	peerstore "github.com/libp2p/go-libp2p-peerstore"
 	multiaddr "github.com/multiformats/go-multiaddr"
+	"github.com/TRON-US/go-btfs-api"
+	config "github.com/TRON-US/go-btfs"
 )
 
 var JsondocGlossary = jsondoc.NewGlossary().
@@ -32,7 +33,7 @@ const IndentLevel = 4
 // Failsafe when traversing objects containing objects of the same type
 const MaxIndent = 20
 
-// Endpoint defines an IPFS RPC API endpoint.
+// Endpoint defines an BTFS RPC API endpoint.
 type Endpoint struct {
 	Name        string
 	Arguments   []*Argument
@@ -42,7 +43,7 @@ type Endpoint struct {
 	Group       string
 }
 
-// Argument defines an IPFS RPC API endpoint argument.
+// Argument defines an BTFS RPC API endpoint argument.
 type Argument struct {
 	Name        string
 	Description string
@@ -57,18 +58,18 @@ func (a sorter) Len() int           { return len(a) }
 func (a sorter) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a sorter) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
-const APIPrefix = "/api/v0"
+const APIPrefix = "/api/"+ shell.API_VERSION
 
-// AllEndpoints gathers all the endpoints from go-ipfs.
+// AllEndpoints gathers all the endpoints from go-btfs.
 func AllEndpoints() []*Endpoint {
 	return Endpoints(APIPrefix, corecmds.Root)
 }
 
-func IPFSVersion() string {
+func BTFSVersion() string {
 	return config.CurrentVersionNumber
 }
 
-// Endpoints receives a name and a go-ipfs command and returns the endpoints it
+// Endpoints receives a name and a go-btfs command and returns the endpoints it
 // defines] (sorted). It does this by recursively gathering endpoints defined by
 // subcommands. Thus, calling it with the core command Root generates all
 // the endpoints.
