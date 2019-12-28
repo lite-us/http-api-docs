@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/Stebalien/go-json-doc v0.0.2
 	github.com/TRON-US/go-btfs v0.4.20-rc2.0.20191224005818-01f683c1d053
+	github.com/TRON-US/go-btfs-api v0.1.0
 	github.com/TRON-US/go-btfs-cmds v0.1.5
 	github.com/ipfs/go-cid v0.0.2
 	github.com/libp2p/go-libp2p-peer v0.2.0
